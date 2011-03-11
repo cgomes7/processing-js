@@ -1610,8 +1610,13 @@
     };
 
     p.ArrayList = function(size, size2, size3) {
-      var array = new Array(0 | size);
-
+	    
+	  if(typeof size === "object"){
+		var array = size.slice(0);			  
+	  }else{
+      	var array = new Array(0 | size);
+      }
+      
       if (size2) {
         for (var i = 0; i < size; i++) {
           array[i] = [];
