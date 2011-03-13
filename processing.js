@@ -1188,7 +1188,7 @@
   //defaultScope.PImage    = PImage;     // TODO
   //defaultScope.PShape    = PShape;     // TODO
   //defaultScope.PShapeSVG = PShapeSVG;  // TODO
-
+  
   var Processing = this.Processing = function Processing(curElement, aCode) {
     // Previously we allowed calling Processing as a func instead of ctor, but no longer.
     if (!(this instanceof Processing)) {
