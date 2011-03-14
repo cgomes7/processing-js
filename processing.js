@@ -480,7 +480,11 @@
       if (arguments.length === 0) {
         array = [];
       } else if (arguments.length > 0 && typeof arguments[0] !== 'number') {
-        array = arguments[0];
+        if(arguments[0].toArray){
+          array = arguments[0].toArray();
+        }else if(arguments[0].slice){
+          array = arguments[0].slice(0);
+        }
       } else {
         array = [];
         array.length = 0 | arguments[0];
